@@ -40,6 +40,15 @@ class MenuPage extends StatelessWidget {
                 },
                 child: const Text('Circular Timer'),
               ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(
+                    context,
+                    RouteGenerator.linearTimer,
+                  );
+                },
+                child: const Text('Linear Timer'),
+              ),
             ],
           ),
         ),

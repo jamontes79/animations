@@ -1,5 +1,6 @@
 import 'package:animations/ball/animated_ball_page.dart';
 import 'package:animations/circular_timer/presentation/circular_timer_page.dart';
+import 'package:animations/linear_timer/linear_timer_page.dart';
 import 'package:animations/menu/menu_page.dart';
 import 'package:animations/timer/timer_page.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +10,7 @@ class RouteGenerator {
   static const String animatedBall = 'ball';
   static const String circularTimer = 'circularTimer';
   static const String timer = 'timer';
-
+  static const String linearTimer = 'linearTimer';
   static Route<MaterialPageRoute> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case menuPage:
@@ -34,6 +35,12 @@ class RouteGenerator {
         return MaterialPageRoute(
           builder: (_) => const TimerPage(
             key: Key('timer_page'),
+          ),
+        );
+      case linearTimer:
+        return MaterialPageRoute(
+          builder: (_) => const LinearTimerPage(
+            key: Key('linear_timer_page'),
           ),
         );
       default:
