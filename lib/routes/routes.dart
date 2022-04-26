@@ -4,6 +4,7 @@ import 'package:animations/linear_timer/linear_timer_page.dart';
 import 'package:animations/menu/menu_page.dart';
 import 'package:animations/shimmer/shimmer_effect_page.dart';
 import 'package:animations/timer/timer_page.dart';
+import 'package:animations/widget_transitions/widget_transitions_page.dart';
 import 'package:flutter/material.dart';
 
 class RouteGenerator {
@@ -13,6 +14,7 @@ class RouteGenerator {
   static const String timer = 'timer';
   static const String linearTimer = 'linearTimer';
   static const String shimmerEffect = 'shimmerEffect';
+  static const String widgetTransitions = 'widgetTransitions';
   static Route<MaterialPageRoute> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case menuPage:
@@ -49,6 +51,12 @@ class RouteGenerator {
         return MaterialPageRoute(
           builder: (_) => const ShimmerEffectPage(
             key: Key('shimmer_effect_page'),
+          ),
+        );
+      case widgetTransitions:
+        return MaterialPageRoute(
+          builder: (_) => const WidgetTransitionsPage(
+            key: Key('widget_transitions_page'),
           ),
         );
       default:

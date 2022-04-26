@@ -58,6 +58,15 @@ class MenuPage extends StatelessWidget {
                 },
                 child: const Text('Shimmer Effect Loading'),
               ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(
+                    context,
+                    RouteGenerator.widgetTransitions,
+                  );
+                },
+                child: const Text('Widget Transitions'),
+              ),
             ],
           ),
         ),
