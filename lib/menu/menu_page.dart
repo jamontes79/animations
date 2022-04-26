@@ -49,6 +49,15 @@ class MenuPage extends StatelessWidget {
                 },
                 child: const Text('Linear Timer'),
               ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(
+                    context,
+                    RouteGenerator.shimmerEffect,
+                  );
+                },
+                child: const Text('Shimmer Effect Loading'),
+              ),
             ],
           ),
         ),
